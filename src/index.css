@@ -1,0 +1,153 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-color {
+  background-color: #000
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.fade-enter {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-exit {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.fade-exit-active {
+  opacity: 0;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake:hover {
+  animation: shake 0.5s ease-in-out 2;
+}
+
+@keyframes shakeDialog {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(-1px);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s ease-in-out;
+}
+
+.animate-rotate {
+  animation: rotate 1s ease-in-out;
+}
+
+.shakeDialog {
+  animation: shakeDialog 0.5s ease-in-out 99999;
+}
+
+.move-up-lg {
+  transform: translateY(-50px);
+  transition: transform 1s ease-in-out;
+}
+
+.faq-item {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+
+.faq-item.active {
+  max-height: 200px;
+}
+
+@media (max-width: 767px) {
+  .move-up-lg {
+    transform: translateY(-20px);
+  }
+}
+
+@layer utilities {
+  .fade-enter {
+    @apply opacity-0;
+  }
+  .fade-enter-active {
+    @apply transition-opacity duration-1000 opacity-100;
+  }
+  .fade-exit {
+    @apply opacity-100;
+  }
+  .fade-exit-active {
+    @apply transition-opacity duration-1000 opacity-0;
+  }
+}

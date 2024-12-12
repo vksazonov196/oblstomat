@@ -4,6 +4,7 @@ import PrizePage from "./PrizePage";
 import { months_localized, days_localized } from "./FirstDialog";
 import PrizeWinners from "./PrizeWinners";
 import FaqPanel from "./FaqPanel";
+import Clarity from '@microsoft/clarity';
 
 export const lang = "ua";
 
@@ -18,7 +19,9 @@ function App() {
 
   const filepath = "./"; // './' || 'assets/'
   const company = "Oblsmomat";
-  const item = "знижку на 10% на лікування ";
+  const projectId = "pcqzk23pf3"
+  Clarity.init(projectId);
+  const item = "знижку на 10% на лікування";
   const country = "Україна";
   const price = "$6.99";
   const staticPrefix = "+38";
@@ -41,6 +44,18 @@ function App() {
       buttons: ["Ніколи", "Рідко", "Часто"],
     },
   ];
+
+  useEffect(() => {
+    if (currentQuestion < questions.length) {
+      Clarity.tag('question-page');
+    } else if (showVerification) {
+      Clarity.tag('verification-page');
+    } else if (faqOpen) {
+      Clarity.tag('faq-page');
+    } else {
+      Clarity.tag('prize-page');
+    }
+  }, [currentQuestion, showVerification, faqOpen]);
 
   const winners = [
     {

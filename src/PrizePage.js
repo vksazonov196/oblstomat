@@ -4,6 +4,7 @@ import TryDialog from "./TryDialog";
 import PrizeDialog from "./PrizeDialog";
 import Form from "./Form";
 import FaqPanel from "./FaqPanel";
+import Clarity from '@microsoft/clarity';
 
 function PrizePage({
   item,
@@ -36,6 +37,12 @@ function PrizePage({
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (showForm) {
+      Clarity.tag('form-page');
+    }
+  }, [showForm]);
 
   const handleClick = (index) => {
     if (!openedBoxes[index] && openedCount < 3 && !isDialogOpen) {

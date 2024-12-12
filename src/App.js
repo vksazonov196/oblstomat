@@ -47,13 +47,13 @@ function App() {
 
   useEffect(() => {
     if (currentQuestion < questions.length) {
-      Clarity.tag('question-page');
+      Clarity.identify('question-page');
     } else if (showVerification) {
-      Clarity.tag('verification-page');
+      Clarity.identify('verification-page');
     } else if (faqOpen) {
-      Clarity.tag('faq-page');
+      Clarity.identify('faq-page');
     } else {
-      Clarity.tag('prize-page');
+      Clarity.identify('prize-page');
     }
   }, [currentQuestion, showVerification, faqOpen]);
 

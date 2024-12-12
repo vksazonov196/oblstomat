@@ -40,7 +40,7 @@ function PrizePage({
 
   useEffect(() => {
     if (showForm) {
-      Clarity.tag('form-page');
+      Clarity.identify('form-page');
     }
   }, [showForm]);
 

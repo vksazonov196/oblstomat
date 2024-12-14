@@ -16,7 +16,6 @@ export default function Form({
   const [number, setNumber] = useState("");
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
-  const [address, setAddress] = useState("");
   const [post, setPost] = useState("");
   const [town, setTown] = useState("");
   const [eMail, setEMail] = useState("");
@@ -48,10 +47,6 @@ export default function Form({
   const handleChangeSurname = (e) => {
     const filteredValue = e.target.value.replace(/[0-9]/g, "");
     setSurname(filteredValue);
-  };
-
-  const handleChangeAddress = (e) => {
-    setAddress(e.target.value);
   };
 
   const handleChangePost = (e) => {
@@ -188,7 +183,7 @@ export default function Form({
                 className="border p-1 rounded-sm w-full focus:outline-none focus:ring-indigo-500"
               />
             </div> */}
-            <div className="flex justify-between gap-2 mb-2">
+            {/* <div className="flex justify-between gap-2 mb-2">
               <div className="relative w-[50%]">
                 <input
                   value={post}
@@ -213,14 +208,14 @@ export default function Form({
                   className="border p-1 rounded-sm w-full focus:outline-none focus:ring-indigo-500"
                 />
               </div>
-            </div>
-            <select
+            </div> */}
+            {/* <select
               name="country"
               autoComplete="country"
               className="border mb-2 p-1 rounded-sm w-full focus:outline-none focus:ring-indigo-500"
             >
               <option>Україна</option>
-            </select>
+            </select> */}
             <div className="flex mb-2 relative">
               <div className="bg-gray-300 flex justify-center items-center sm:w-[7%] w-[10%] border rounded-sm">
                 <img src={`${filepath}flag.png`} alt="flag" className="h-3" />
@@ -241,7 +236,6 @@ export default function Form({
                 type="email"
                 onChange={handleChangeEmail}
                 placeholder="E-mail"
-                required
                 autoComplete="email"
                 name="email"
                 className="border p-1 rounded-sm w-full focus:outline-none focus:ring-indigo-500"

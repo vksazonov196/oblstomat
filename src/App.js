@@ -4,7 +4,6 @@ import PrizePage from "./PrizePage";
 import { months_localized, days_localized } from "./FirstDialog";
 import PrizeWinners from "./PrizeWinners";
 import FaqPanel from "./FaqPanel";
-import Clarity from '@microsoft/clarity';
 
 export const lang = "ua";
 
@@ -19,8 +18,6 @@ function App() {
 
   const filepath = "./"; // './' || 'assets/'
   const company = "Oblsmomat";
-  const projectId = "pcqzk23pf3"
-  Clarity.init(projectId);
   const item = "знижку на 10% на лікування";
   const country = "Україна";
   const price = "$6.99";
@@ -30,7 +27,7 @@ function App() {
   const questions = [
     {
       id: 1,
-      question: "Чи маєте ви дійсну адресу проживання в Україні?",
+      question: "Чи робите ви професійну гігієну раз на рік ?",
       buttons: ["Так", "Ні"],
     },
     {
@@ -44,18 +41,6 @@ function App() {
       buttons: ["Ніколи", "Рідко", "Часто"],
     },
   ];
-
-  useEffect(() => {
-    if (currentQuestion < questions.length) {
-      Clarity.identify('question-page');
-    } else if (showVerification) {
-      Clarity.identify('verification-page');
-    } else if (faqOpen) {
-      Clarity.identify('faq-page');
-    } else {
-      Clarity.identify('prize-page');
-    }
-  }, [currentQuestion, showVerification, faqOpen]);
 
   const winners = [
     {
@@ -204,7 +189,7 @@ function App() {
               </p>
               <p className="text-sm mb-1 text-center">
                 Ви можете виграти {" "}
-                <span className="font-semibold">знижку на лікування від 10% до 30%</span>
+                <span className="font-semibold">{item}</span>
               </p>
             </div>
 
@@ -215,7 +200,7 @@ function App() {
             />
 
             <p className="text-sm mb-4 text-center">
-              Щоб отримати <span className="font-semibold">знижку на лікування від 10% до 30%</span>, заповніть форму та підтвердьте, що ви реальна людина.
+              Щоб отримати <span className="font-semibold">{item}</span>, заповніть форму та підтвердьте, що ви реальна людина.
             </p>
             <p className="text-sm font-bold text-red-500 mb-4 text-center">
               Слідкуйте за новинами!!! Залишилося не дуже багато подарунків!

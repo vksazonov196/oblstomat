@@ -134,7 +134,7 @@ function FirstDialog({ setShowFirstDialog, item, filepath }) {
         Вітаємо, ви підтвердили, що ви реальна людина.
       </h2>
       <p className="text-center mb-4">
-        Сьогодні, {dayOfWeek}, {formattedDate}, ви можете отримати знижку на лікування від 10% до 30%!
+        Сьогодні, {dayOfWeek}, {formattedDate}, ви можете отримати {item}.
       </p>
       <p className="text-center mb-4">
         Все, що вам потрібно зробити, це вибрати правильну подарункову коробку.

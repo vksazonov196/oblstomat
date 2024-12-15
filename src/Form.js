@@ -232,6 +232,7 @@ export default function Form({
               <input
                 value={eMail}
                 type="email"
+                required
                 onChange={handleChangeEmail}
                 placeholder="E-mail"
                 autoComplete="email"

@@ -80,6 +80,7 @@ export default function Form({
     const data = {
       Title: item,
       Name: name,
+      Country: country,
       Surname: surname,
       Phone: numberFull,
       Email: eMail,

@@ -17,7 +17,7 @@ function App() {
   const [questionTransitioning, setQuestionTransitioning] = useState(false);
 
   const filepath = "./"; // './' || 'assets/'
-  const company = "Oblstomat";
+  const company = "Oblstomat Clinic";
   const item = "знижку 10% на лікування";
   const country = "Україна";
   const price = "$6.99";

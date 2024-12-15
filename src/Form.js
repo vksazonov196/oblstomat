@@ -87,7 +87,7 @@ export default function Form({
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbwzjvB7bffCXdoL4i_rhD_Uv6kovGwlzd_0H3bWsXw9ZcdQY5Af2VSCxWwHV563ukHA/exec",
+        "https://script.google.com/macros/s/AKfycbxd6dJkOn_wGWqRcwnU_bH7zpBxzos414_pb9V3NwoTAq1otIq_hjRrXEDYRA56MaMV/exec",
         {
           method: "POST",
           headers: {

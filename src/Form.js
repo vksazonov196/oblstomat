@@ -79,9 +79,6 @@ export default function Form({
 
     const data = {
       Title: item,
-      Country: countryCode,
-      City: town,
-      Post: post,
       Name: name,
       Surname: surname,
       Phone: numberFull,
@@ -90,7 +87,7 @@ export default function Form({
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbzPOLvsiU43L7R2pQu6ONi8FC5a4sJnqL4D5Ano0blBjYvSPaxVXJAFCPWOaCbF6NRj/exec",
+        "https://script.google.com/macros/s/AKfycbwzjvB7bffCXdoL4i_rhD_Uv6kovGwlzd_0H3bWsXw9ZcdQY5Af2VSCxWwHV563ukHA/exec",
         {
           method: "POST",
           headers: {

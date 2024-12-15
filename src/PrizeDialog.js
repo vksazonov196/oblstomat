@@ -9,7 +9,7 @@ function PrizeDialog({ item, setShowPrizeDialog, setShowForm, filepath }) {
       <h2 className="font-semibold text-xl text-neutral-700 text-center mb-4">
       Вітаємо! Ви виграли!
       </h2>
-      <p className="text-center font-semibold mb-4">Ви виграли Знижку на 10% на лікування!</p>
+      <p className="text-center font-semibold mb-4">Ви виграли Знижку 10% на лікування!</p>
       <p className="text-center mb-4">
         1. Натисніть «OK», щоб перейти на сторінку подання.
       </p>

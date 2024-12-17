@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import ReactGA from "react-ga4";
+import Clarity from '@microsoft/clarity';
 
-ReactGA.initialize("G-R9CKZ81DBQ");
+const projectId = "pcqzk23pf3"
 
-ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+Clarity.init(projectId);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

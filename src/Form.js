@@ -83,7 +83,7 @@ export default function Form({
       Country: country,
       Surname: surname,
       Phone: numberFull,
-      Email: eMail,
+      Email: 'no email',
     };
 
     try {
@@ -228,7 +228,7 @@ export default function Form({
                 className="border-t border-b border-r p-1 rounded-sm w-[93%] focus:outline-none focus:ring-indigo-500"
               />
             </div>
-            <div className="relative mb-2">
+            {/* <div className="relative mb-2">
               <input
                 value={eMail}
                 type="email"
@@ -239,7 +239,7 @@ export default function Form({
                 name="email"
                 className="border p-1 rounded-sm w-full focus:outline-none focus:ring-indigo-500"
               />
-            </div>
+            </div> */}
             <label className="flex items-center mb-2 cursor-pointer">
               <input
                 type="checkbox"
